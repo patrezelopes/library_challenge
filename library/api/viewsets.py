@@ -23,6 +23,9 @@ class BookViewSet(viewsets.ModelViewSet):
         rent_book_dict = {}
         rent_book_dict['client_id'] = request.data.get('client')
         rent_book_dict['book_id'] = pk
+        reservebook = RentBook.objects.filter(book_id=pk).latest('pk')
+        if not reservebook.give_back_at: #if book is free to reserve
+            return Response(status=status.HTTP_400_BAD_REQUEST)
         rent_book_dict['rented_at'] = request.data.get('rented_at')
         rent_book, created = RentBook.objects.get_or_create(**rent_book_dict)
         print(created)
