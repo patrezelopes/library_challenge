@@ -4,19 +4,56 @@ git clone https://github.com/patrezelopes/desafio-dev.git
  ``` 
 
 #### Create containers web e db
+
  ``` 
 cd ./library_challenge
  ``` 
 
-### Using docker:
+### Change default database if using docker or virtual env
+'''
+DATABASES = {
+    'default': {
+    # using_env:
+    # using_docker:
+    }}
+''' 
+
+### If using docker:
  ``` 
 docker-compose up --build -d
  ``` 
 
-### Using virtual env
+### If using virtual env
+
+### Linux terminal
  ``` 
-sudo apt install virtualenv
+sudo apt install python3-pip python3-dev libpq-dev virtualenv postgresql postgresql-contrib
  ``` 
+
+### using postgres
+'''
+psql -h localhost -U postgres 
+
+'''
+CREATE ROLE agriness WITH ENCRYPTED PASSWORD 'password' LOGIN;
+
+ALTER ROLE agriness WITH ENCRYPTED PASSWORD '4gr1n3ss' LOGIN;
+
+SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE 
+    -- don't kill my own connection!
+    pid <> pg_backend_pid()
+    -- don't kill the connections to other databases
+    AND datname = agriness_db';
+
+CREATE DATABASE agriness_db OWNER agriness ENCODING 'UTF8' TEMPLATE template0 LC_COLLATE 'pt_BR.UTF8' LC_CTYPE 'pt_BR.UTF8';
+GRANT ALL PRIVILEGES ON DATABASE agriness_db TO postgres;
+'''
+
+### Access Database
+'''
+psql -h localhost -U postgres -d agriness_db
+'''
+
 
 #### creating a virtual env using python 3
  ``` 
