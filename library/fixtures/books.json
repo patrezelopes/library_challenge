@@ -1,0 +1,26 @@
+[
+  {
+    "model": "library.book",
+    "pk": 1,
+    "fields": {
+      "name": "Harry Potter e a Pedra Filosofal",
+      "author": "J.K. Rowling"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 2,
+    "fields": {
+      "name": "O Código Da Vinci",
+      "author": "Dan Brown"
+    }
+  },
+    {
+    "model": "library.book",
+    "pk": 3,
+    "fields": {
+      "name": "A Guerra dos Tronos",
+      "author": "R. R. Martin"
+    }
+  }
+]

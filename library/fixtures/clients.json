@@ -1,0 +1,23 @@
+[
+  {
+    "model": "library.client",
+    "pk": 1,
+    "fields": {
+      "name": "Patreze Lopes"
+    }
+  },
+  {
+    "model": "library.client",
+    "pk": 2,
+    "fields": {
+      "name": "José da Silva"
+    }
+  },
+    {
+    "model": "library.client",
+    "pk": 3,
+    "fields": {
+      "name": "Maria Souza"
+    }
+  }
+]

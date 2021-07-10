@@ -1,0 +1,38 @@
+[
+  {
+    "model": "library.rentbook",
+    "pk": 1,
+    "fields": {
+      "client": "1",
+      "book": "3",
+      "rented_at": "2021-06-04T11:46Z"
+    }
+  },
+  {
+    "model": "library.rentbook",
+    "pk": 2,
+    "fields": {
+      "client": "2",
+      "book": "1",
+      "rented_at": "2021-07-07T11:46Z"
+    }
+  },
+    {
+    "model": "library.rentbook",
+    "pk": 3,
+    "fields": {
+      "client": "3",
+      "book": "2",
+      "rented_at": "2021-07-11T11:46Z"
+    }
+  },
+      {
+    "model": "library.rentbook",
+    "pk": 4,
+    "fields": {
+      "client": "1",
+      "book": "1",
+      "rented_at": "2021-07-01T11:46Z"
+    }
+  }
+]
