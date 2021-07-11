@@ -1,8 +1,5 @@
-import re
 from datetime import datetime, timezone
-
 from django.db import models
-from django.utils.datetime_safe import time, date
 
 
 class Book(models.Model):
@@ -59,5 +56,4 @@ class RentBook(models.Model):
         else:
             fine = 0.07
             rate = 0.006
-
         return '{:.5f}'.format(fine+rate*late)
