@@ -4,9 +4,8 @@ from rest_framework import routers
 from .api.viewsets import BookViewSet, ClientReservesViewSet
 
 router = routers.DefaultRouter()
-router.register(r'books', BookViewSet)
-router.register(r'client', ClientReservesViewSet)
-#router.register(r'books/<int:pk>/reserve', RentedsBookViewSet)
+router.register(r'books', BookViewSet, basename='book')
+router.register(r'client', ClientReservesViewSet, basename='client')
 
 
 
