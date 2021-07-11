@@ -116,6 +116,11 @@ python manage.py loaddata library/fixtures/*.json
 
  ``` 
 
+#### Unit tests
+ ``` 
+python manage.py test
+ ``` 
+
 #### Running application
  ``` 
 python manage.py runserver 0.0.0.0:8000
