@@ -23,6 +23,20 @@ DATABASES = {
 docker-compose up --build -d
  ``` 
 
+##### Alter role to create db on unit tests
+ ```
+docker exec -it agriness_lib_db_1 psql -h localhost -U agriness -d agriness_db 
+
+ALTER USER agriness CREATEDB;
+
+exit
+ ```
+
+##### To see unit test
+ ``` 
+docker-compose up --build 
+ ``` 
+
 ### If using virtual env
 
 ### Linux terminal
@@ -47,6 +61,10 @@ SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE
 
 CREATE DATABASE agriness_db OWNER agriness ENCODING 'UTF8' TEMPLATE template0 LC_COLLATE 'pt_BR.UTF8' LC_CTYPE 'pt_BR.UTF8';
 GRANT ALL PRIVILEGES ON DATABASE agriness_db TO postgres;
+
+ALTER USER agriness CREATEDB;
+
+exit
 '''
 
 ### Access Database

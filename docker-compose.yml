@@ -10,7 +10,7 @@ services:
             python manage.py loaddata library/fixtures/books.json
             python manage.py loaddata library/fixtures/clients.json
             python manage.py loaddata library/fixtures/rents.json
-            python library/tests.py -v
+            python manage.py test
             python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code

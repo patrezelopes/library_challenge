@@ -80,6 +80,7 @@ WSGI_APPLICATION = 'agriness_lib.wsgi.application'
 
 DATABASES = {
     'default': {
+    # using_env:
         # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
         # 'NAME': 'agriness_db',
         # 'USER': 'agriness',
