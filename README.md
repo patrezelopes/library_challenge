@@ -10,13 +10,13 @@ cd ./library_challenge
  ``` 
 
 ### Change default database if using docker or virtual env
-'''
+ ``` 
 DATABASES = {
     'default': {
     # using_env:
     # using_docker:
     }}
-''' 
+ ``` 
 
 ### If using docker:
  ``` 
@@ -45,10 +45,11 @@ sudo apt install python3-pip python3-dev libpq-dev virtualenv postgresql postgre
  ``` 
 
 ### using postgres
-'''
+ ``` 
 psql -h localhost -U postgres 
+ ``` 
 
-'''
+ ``` 
 CREATE ROLE agriness WITH ENCRYPTED PASSWORD 'password' LOGIN;
 
 ALTER ROLE agriness WITH ENCRYPTED PASSWORD '4gr1n3ss' LOGIN;
@@ -65,12 +66,12 @@ GRANT ALL PRIVILEGES ON DATABASE agriness_db TO postgres;
 ALTER USER agriness CREATEDB;
 
 exit
-'''
+ ``` 
 
 ### Access Database
-'''
+ ``` 
 psql -h localhost -U postgres -d agriness_db
-'''
+ ``` 
 
 
 #### creating a virtual env using python 3
